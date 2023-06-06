@@ -3,8 +3,8 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/my-ts.umd.cjs",
-  "module": "./dist/my-ts.js",
+  "main": "./dist/account-ts.umd.cjs",
+  "module": "./dist/account-ts.js",
   "types": "./dist/index.d.ts",
   "license": "ISC",
   "keywords": [
@@ -16,8 +16,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/my-ts.js",
-      "require": "./dist/my-ts.umd.cjs"
+      "import": "./dist/account-ts.js",
+      "require": "./dist/account-ts.umd.cjs"
     }
   },
   "repository": {

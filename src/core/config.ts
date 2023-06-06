@@ -4,7 +4,7 @@
  */
 export let config = {
   baseURL: "https://account.werify.net/api/",
-  apiVersion: "v1/",
+  apiVersion: "",
   authorization: "Authorization",
   token: "",
   endpoints: {

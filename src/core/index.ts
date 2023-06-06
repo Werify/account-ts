@@ -1,8 +1,7 @@
 import { config } from "./config";
 
-export const usePath = (endpoint: any) => {
-  // @ts-ignore
-  return config.baseURL + config.apiVersion + config.endpoints[endpoint];
+export const usePath = (endpoint: string) => {
+  return config.baseURL + config.apiVersion + endpoint;
 };
 
 interface IHeader {
@@ -15,7 +14,7 @@ export const useHeader = (payload: IHeader) => {
     headers: {
       accept: "application/json",
       method: payload.method,
-      body: payload.body,
+      body: JSON.stringify(payload.body),
       "Content-Type": "application/json",
       [config.authorization]: config.token,
     },
