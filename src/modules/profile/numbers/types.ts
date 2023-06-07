@@ -14,7 +14,7 @@ export interface INumbersListResponse extends IApiResponse {
   }[];
 }
 
-export interface INumbersCreatePayload {
+export interface INumbersPayload {
   type?: string;
   number?: string;
   country?: string;

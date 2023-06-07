@@ -1,10 +1,10 @@
 import { useHeader, usePath } from "../../../core";
 import { config } from "../../../core/config";
 import { handleResponse } from "../../../core/response";
-import { INumbersCreatePayload, INumbersListResponse } from "./types";
+import { INumbersPayload, INumbersListResponse } from "./types";
 
 export const numbers = () => {
-  const store = async (payload: INumbersCreatePayload) => {
+  const store = async (payload: INumbersPayload) => {
     return await fetch(
       usePath(config.endpoints.profile.numbers),
       useHeader({ method: "POST", body: payload })
@@ -31,7 +31,7 @@ export const numbers = () => {
     });
   };
 
-  const update = async (payload: INumbersCreatePayload) => {
+  const update = async (payload: INumbersPayload) => {
     return await fetch(
       usePath(config.endpoints.profile.numbers),
       useHeader({ method: "PUT", body: payload })

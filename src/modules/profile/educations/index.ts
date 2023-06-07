@@ -1,12 +1,12 @@
 import { useHeader, usePath } from "../../../core";
 import { config } from "../../../core/config";
 import { handleResponse } from "../../../core/response";
-import { IFinancialsPayload } from "./types";
+import { IEducationPayload } from "./types";
 
-export const financials = () => {
-  const store = async (payload: IFinancialsPayload) => {
+export const educations = () => {
+  const store = async (payload: IEducationPayload) => {
     return await fetch(
-      usePath(config.endpoints.profile.financials),
+      usePath(config.endpoints.profile.educations),
       useHeader({ method: "POST", body: payload })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -15,7 +15,7 @@ export const financials = () => {
 
   const destroy = async (payload: string) => {
     return await fetch(
-      usePath(`${config.endpoints.profile.financials}/${payload}`),
+      usePath(`${config.endpoints.profile.educations}/${payload}`),
       useHeader({ method: "DELETE" })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -24,16 +24,16 @@ export const financials = () => {
 
   const list = async () => {
     return await fetch(
-      usePath(config.endpoints.profile.financials),
+      usePath(config.endpoints.profile.educations),
       useHeader({ method: "GET" })
     ).then(async (response) => {
       return await handleResponse(response);
     });
   };
 
-  const update = async (payload: IFinancialsPayload) => {
+  const update = async (payload: IEducationPayload) => {
     return await fetch(
-      usePath(config.endpoints.profile.financials),
+      usePath(config.endpoints.profile.educations),
       useHeader({ method: "PUT", body: payload })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -42,7 +42,7 @@ export const financials = () => {
 
   const single = async (payload: string) => {
     return await fetch(
-      usePath(`${config.endpoints.profile.financials}/${payload}`),
+      usePath(`${config.endpoints.profile.educations}/${payload}`),
       useHeader({ method: "GET" })
     ).then(async (response) => {
       return await handleResponse(response);
