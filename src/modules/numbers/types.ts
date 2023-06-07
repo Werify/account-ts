@@ -1,4 +1,4 @@
-import { IApiResponse } from "../../../core/response";
+import { IApiResponse } from "../../core/response";
 
 export interface INumbersListResponse extends IApiResponse {
   results: {

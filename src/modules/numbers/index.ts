@@ -1,12 +1,12 @@
-import { useHeader, usePath } from "../../../core";
-import { config } from "../../../core/config";
-import { handleResponse } from "../../../core/response";
+import { useHeader, usePath } from "../../core";
+import { config } from "../../core/config";
+import { handleResponse } from "../../core/response";
 import { INumbersPayload, INumbersListResponse } from "./types";
 
 export const numbers = () => {
   const store = async (payload: INumbersPayload) => {
     return await fetch(
-      usePath(config.endpoints.profile.numbers),
+      usePath(config.endpoints.numbers),
       useHeader({ method: "POST", body: payload })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -15,7 +15,7 @@ export const numbers = () => {
 
   const destroy = async (payload: string) => {
     return await fetch(
-      usePath(`${config.endpoints.profile.numbers}/${payload}`),
+      usePath(`${config.endpoints.numbers}/${payload}`),
       useHeader({ method: "DELETE" })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -24,7 +24,7 @@ export const numbers = () => {
 
   const list = async () => {
     return await fetch(
-      usePath(config.endpoints.profile.numbers),
+      usePath(config.endpoints.numbers),
       useHeader({ method: "GET" })
     ).then(async (response) => {
       return (await handleResponse(response)) as INumbersListResponse;
@@ -33,7 +33,7 @@ export const numbers = () => {
 
   const update = async (payload: INumbersPayload) => {
     return await fetch(
-      usePath(config.endpoints.profile.numbers),
+      usePath(config.endpoints.numbers),
       useHeader({ method: "PUT", body: payload })
     ).then(async (response) => {
       return await handleResponse(response);
@@ -42,7 +42,7 @@ export const numbers = () => {
 
   const single = async (payload: string) => {
     return await fetch(
-      usePath(`${config.endpoints.profile.numbers}/${payload}`),
+      usePath(`${config.endpoints.numbers}/${payload}`),
       useHeader({ method: "GET" })
     ).then(async (response) => {
       return (await handleResponse(response)) as INumbersListResponse;

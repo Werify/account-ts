@@ -20,10 +20,10 @@ export let config = {
         activate: "activate-totp",
       },
     },
+    meta: "meta",
+    numbers: "numbers",
     profile: {
-      meta: "meta",
       profile: "profile",
-      numbers: "numbers",
       uploads: "uploads",
       educations: "profile/educations",
       financials: "profile/financials",
