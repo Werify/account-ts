@@ -4,8 +4,8 @@ import { config } from "./core/config";
 import { login } from "./modules/login";
 
 export const account = {
-  meta: meta(),
-  login: login,
-  config: config,
-  profile: profile,
+  meta,
+  login,
+  config,
+  profile,
 };
