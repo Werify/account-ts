@@ -4,7 +4,7 @@
  */
 export let config = {
   baseURL: "https://account.werify.net/api/",
-  apiVersion: "",
+  apiVersion: "v1/",
   authorization: "Authorization",
   token: "",
   endpoints: {
@@ -21,11 +21,12 @@ export let config = {
       },
     },
     profile: {
-      financials: {},
-      educations: {},
-      update: "",
-      read: "",
-      upload: "",
+      meta: "meta",
+      profile: "profile",
+      numbers: "numbers",
+      uploads: "uploads",
+      educations: "profile/educations",
+      financials: "profile/financials",
     },
   },
 };
