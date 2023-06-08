@@ -11,6 +11,7 @@ export interface INumbersListResponse extends IApiResponse {
     verified: boolean;
     call_type: string;
     last_call: string;
+    country_code: string;
   }[];
 }
 
