@@ -16,3 +16,9 @@ export interface IRequestOtpResponse extends IApiResponse {
     id: string;
   };
 }
+
+export interface IVerifyOtpResponse extends IApiResponse {
+    results: {
+        jwt_token: string;
+    };
+}
